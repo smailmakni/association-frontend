@@ -1,0 +1,54 @@
+body {background-color : #2d2b2b; }
+
+h1 {padding: 40px; text-align: center; font-size: 1.5em;}
+
+li a {text-decoration : none; color : #eff1f2;}
+
+.sidebar {
+  height: 100%; /* Assure que la barre latérale occupe toute la hauteur disponible */
+  max-height: 80vh; /* Définit une hauteur maximale de 80% de la hauteur de la fenêtre */
+  overflow-y: auto; /* Active la barre de défilement verticale si le contenu dépasse la hauteur */
+}
+
+nav {
+  font-size: xxx-large;
+  width : 100%; 
+  background:bg-dark;
+  margin : auto; 
+}
+
+ span  {
+  color : white;
+  cursor : pointer;
+  display: block; 
+}
+
+span::after {
+  float: none;
+  content: " + ";
+}
+
+.slide {    
+  clear:both;
+  height:0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height .4s ease;
+}
+
+.slide li {padding : 20px;}
+
+#user {position: absolute; opacity: 0; height: 0px;} 
+#agency {position: absolute; opacity: 0; height: 0px;}    
+#center {position: absolute; opacity: 0; height: 0px;}    
+#room {position: absolute; opacity: 0; height: 0px;}    
+#equipment {position: absolute; opacity: 0; height: 0px;}    
+#document {position: absolute; opacity: 0; height: 0px;}    
+
+
+#user:checked + .slide {height: 100%;}
+#agency:checked + .slide {height: 100%;}
+#center:checked + .slide {height: 100%;}
+#room:checked + .slide {height: 100%;}
+#equipment:checked + .slide {height: 100%;}
+#document:checked + .slide {height: 100%;}

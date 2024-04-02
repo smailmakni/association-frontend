@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+  .sidebar {
+    position: fixed;
+    display: inline-block;
+    height: 100%;
+    width: 15%;
+  }
+  
+
+  .background-image {
+    background-color: #1d1b1b;
+    background-image: url('assets/img/logo.png');
+    background-repeat: repeat; 
+    background-size: 17%; 
+    height: 100%;
+    width: 100%;
+    position: fixed;
+  }
+

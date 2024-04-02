@@ -1,0 +1,65 @@
+<section class="vh-100 " >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>first name</th>
+                            <th>last name</th>
+                            <th>email</th>
+                            <th>agence</th>
+                            <th>centre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let us of users">
+                            <td class="aligne-middle">{{us.firstName}}</td>
+                            <td class="aligne-middle">{{us.lastName}}</td>
+                            <td class="aligne-middle">{{us.email}}</td>
+                            <td class="aligne-middle">{{us.agence}}</td>
+                            <td class="aligne-middle">{{us.center}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="footer-pagination">
+                    <div class="row">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-9" style="padding-left: 30%">
+                                    <ngb-pagination [(page)]="thePageNumber"
+                                    [pageSize]="thePageSize"
+                                    [collectionSize]="theTotalElements"
+                                    [maxSize]="5"
+                                    [boundaryLinks]="true"
+                                    (pageChange)="listUsers()">
+                                </ngb-pagination>
+                               
+                                </div>
+    
+                                <div class="md-3 mt-2" style="text-align: right;">
+                                <span class="mr-2">Page size</span>
+                                <select #myPageSelect (change)="updatePageSize(myPageSelect.value)">
+                                    <option>2</option>
+                                    <option selected="true">5</option>
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>50</option>
+                                </select>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
